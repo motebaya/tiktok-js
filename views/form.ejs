@@ -1,0 +1,64 @@
+<div class="row justify-content-center mb-3">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <form method="POST">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01"
+              ><i class="bi-life-preserver"></i
+            ></label>
+            <select name="server" class="form-select" id="inputGroupSelect01">
+              <option value="default" selected>Choose Server...</option>
+              <option value="aweme">TikTok Api (without watermark)</option>
+              <option value="snaptik">Snaptik (without watermark)</option>
+              <option value="tikmate">Tikmate (without watermark)</option>
+            </select>
+          </div>
+          <label for="video_url" class="float-start form-label"
+            >Tiktok videos url</label
+          >
+          <div class="input-group mb-3">
+            <span class="input-group-text"><i class="bi-yelp"></i></span>
+            <input
+              name="video_url"
+              id="video_url"
+              type="url"
+              placeholder="#"
+              class="form-control"
+              aria-describedby="video_url"
+              required
+            />
+          </div>
+          <button
+            id="btn-go"
+            type="submit"
+            class="btn btn-outline-secondary btn-sm"
+          >
+            <i class="bi-send me-2"></i>Go
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div
+    class="toast liveToast"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <div class="toast-header">
+      <i class="bi-info-circle me-1"></i>
+      <strong class="me-auto">Tips</strong>
+      <small>just now</small>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="toast-body">Hello, buddy :V</div>
+  </div>
+</div>

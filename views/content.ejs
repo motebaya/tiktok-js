@@ -1,0 +1,173 @@
+<div class="col-md-12">
+  <div class="card">
+
+    <div class="card-header">
+      <% if (result.status){ %>
+      <a href="#" data-toggle="popover" data-trigger="focus" data-placement="right" class="nav-link">
+        <i class="bi-info-circle me-1"></i> Tips!
+      </a>
+      <% } else { %>
+      <a href="#" class="nav-link" data-toggle="popover" data-trigger="focus" data-placement="right" data-error="true">
+        <i class="bi-question-circle me-1"></i> What's Happen?
+      </a>
+      <% } %>
+    </div>
+
+    <div class="card-body">
+      <% if (result.status){ %>
+      <!-- author -->
+      <div class="row align-items-md-start mb-3">
+        <div class="col-md-12">
+          <span class="mt-2 badge bg-secondary mb-1">Author:</span>
+          <% if (result.author.avatar !== undefined){ %>
+          <a href="/api/download?data=<%= encodeURIComponent(encryptStr(result.author.avatar)); %>&dl=<%= result.author.username %>_avatar" target="_blank" rel="noopener noreferrer">
+            <img src="<%= result.author.avatar %>" alt="avatar-images" class="img-thumbnail me-2 mt-2 float-start" style="height: auto; width: 80px"/>
+          </a>
+          <% } else { %>
+          <img src="/images/no-avatar.png" alt="no-avatar" class="img-thumbnail me-2 mt-2 float-start toast-avatar" style="height: auto; width: 80px" />
+          <% } %>
+          <div class="text-capitalize fs-7">
+            <% ['name', 'username', 'bio', 'user_id'].forEach((e, i) => { %>
+              <% if (Object.keys(result.author).includes(e)){ %>
+              <p class="my-0 fw-medium">&sharp; <% if(e === 'user_id'){ %> ID<% } else { %> <%= e %> <% } %> : <%= result.author[e] %>.</p> <% } %>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+
+      <!-- music -->
+      <% if(result.music !== undefined){ %>
+      <div class="row align-items-md-start mb-3">
+        <div class="col-md-12">
+          <span class="mt-2 badge bg-secondary mb-1">Music:</span>
+          <a href="/api/download?data=<%= encodeURIComponent(encryptStr(result.music.cover)); %>&dl=<%= result.music.title.replace(/\s/g, '-'); %>" target="_blank" rel="noopener noreferrer">
+            <img src="<%= result.music.cover %>" alt="avatar" class="img-thumbnail float-start me-2 mt-2 toast-avatar" style="height: auto; width: 80px" />
+          </a>
+          <div class="text-capitalize fs-7 hr">
+            <p class="my-0 fw-medium">&sharp; music by: <%= result.music.author %></p>
+            <p class="my-0 fw-medium">
+              &sharp; title: <%= result.music.title %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      
+      <!-- row start -->
+      <% if (result.isImage){ %>
+      <div class="row mb-3 text-center">
+        <% result.images.forEach((e, i) => { %>
+        <div class="col-md-3">
+          <span class="badge bg-secondary mt-2 mb-2">images:</span>
+          <img src="
+          <% if (typeof e === 'object'){ %>
+            <%= e.thumbnail %>
+          <% } else { %>
+            <%= e %>
+          <% } %>
+          " alt="thumbnail" class="img-thumbnail" />
+          <div class="mt-2">
+            <a href="
+            <% if (typeof e === 'object'){ %>
+              <% if (result.server === 'aweme'){ %>
+                <%= `/api/download?data=${encodeURIComponent(encryptStr(e.url))}&dl=${result.author.username}_${result.video_id}_${i+1}`; %>
+              <% } else { %>
+                <%# external site have own force download %>
+                <%= e.url %>
+              <% } %>
+            <% } else { %>
+              <%# array != object & have own force download %>
+              <%= e %>
+            <% } %>
+            " class="btn btn-sm btn-outline-secondary" rel="noopener noreferrer" target="_blank">
+              <i class="bi-download me-1"></i>Download
+            </a>
+          </div>
+        </div>
+        <% }); %>
+
+        <% if (result.videos !== undefined){ %>
+        <div class="mt-3">
+          <a href="
+          <% if (typeof result.videos === 'object'){ %>
+            <%= result.videos.download_url %>
+          <% } else { %>
+            <%= result.videos %>
+          <% } %>
+          " target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+          <i class="bi-download me-1"></i>Download Rendered Videos
+          </a>
+        </div>
+        <% } %>
+
+        <% if(result.music !== undefined){ %>
+          <div class="mt-3">
+              <a href="/api/download?data=<%= encodeURIComponent(encryptStr(result.music.url)); %>&dl=<%= result.video_id %>_music" class="btn btn-sm btn-outline-secondary me-1 mb-1" target="_blank" rel="noopener noreferrer"><i class="bi-file-earmark-music me-1"></i>Music [server1]</a>
+          </div>
+        <% } %>
+      </div>
+      <!-- row end -->
+
+      <!-- row start -->
+      <% } else { %>
+      <!-- video -->
+      <span class="badge bg-secondary mt-2">video:</span>
+      <div class="row justify-content-center mb-3">
+        <div class="col-md-12">
+          <a href="/api/download?data=<%= encodeURIComponent(encryptStr(result.thumbnail)); %>&dl=<%= `${result.video_id}_thumbnail` %>" target="_blank" rel="noopener noreferrer">
+            <img src="<%= result.thumbnail %>" alt="avatar" class="img-thumbnail mt-2" style="height: auto; width: 30%" />
+          </a>
+        </div>
+      </div>
+
+      <!-- short info -->
+      <div class="mt-2 mb-2">
+        <% ['description', 'title', 'video_id'].forEach((e, i) => { %>
+        <% if (Object.keys(result).includes(e)){ %>
+        <p class="my-0 text-capitalize fw-medium fs-7">
+          &sharp; <% if(e === 'video_id'){ %>ID<% } else {%><%= e %><% } %> : <%= result[e] %>
+        </p>
+        <% } %>
+        <% }); %>
+      </div>
+
+      <!-- download -->
+      <div class="text-center">
+        <span class="badge bg-secondary mb-3 mt-2">download</span>
+        <div class="align-items-center">
+          <% if (Array.isArray(result.videos)){ %>
+            <% result.videos.forEach((e, i) =>{ %>
+            <a href="
+            <% if(result.server === 'aweme'){ %>
+              <%= `/api/download?data=${encodeURIComponent(encryptStr(e))}&dl=${result.video_id}_video` %>
+            <% } else { %>
+              <%# external site have own force download %>
+              <%= e %>
+            <% } %>
+            " class="btn btn-sm btn-outline-secondary me-1 mb-1" target="_blank" rel="noopener noreferrer"><i class="bi-filetype-mp4 me-1"></i>download [server<%= i+1 %>]</a>
+            <% }) %>
+          <% } else { %>
+            <%# tikmate only single video server and have own force download %>
+            <a href="<%= result.videos %>" class="btn btn-sm btn-outline-secondary me-1 mb-1" target="_blank" rel="noopener noreferrer"><i class="bi-filetype-mp4 me-1"></i>download [server1]</a>
+          <% } %>
+
+          <%# only for aweme %>
+          <% if(result.music !== undefined){ %>
+          <a href="/api/download?data=<%= encodeURIComponent(encryptStr(result.music.url)); %>&dl=<%= result.video_id %>_music" class="btn btn-sm btn-outline-secondary me-1 mb-1" target="_blank" rel="noopener noreferrer"><i class="bi-file-earmark-music me-1"></i>Music [server1]</a>
+          <% } %>
+        </div>
+      </div>
+      <!-- end download -->
+      <% } %>
+    <% } else { %>
+      <div class="d-md-block">
+        <p class="fw-medium fs-1 float-start">500</p>
+        <img data-filled="light" src="/images/crying.svg" alt="no-result-crying" class="mt-0 mb-0 p-0 float-end svg-crying" width="40%" />
+      </div>
+    <% } %>
+    </div>
+
+<!-- body card result end -->
+  </div>
+</div>
+<script src="/js/content.js"></script>

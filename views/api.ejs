@@ -1,0 +1,58 @@
+<%- include("header") %>
+<div class="d-flex flex-column min-vh-100">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <a
+              class="btn btn-sm btn-outline-secondary"
+              data-bs-toggle="collapse"
+              href="#collapseApi"
+              role="button"
+              aria-expanded="true"
+              aria-controls="collapseApi"
+            >
+              <i class="bi-tools me-1"></i> Endpoint:
+            </a>
+          </div>
+
+          <div class="collapse" id="collapseApi">
+            <div class="row p-3 ms-1 mt-0 me-1">
+              <div class="card">
+                <div class="card-body">
+                  <p class="fw-normal">
+                    endpoint:
+                    <span class="badge text-bg-secondary">/api/postVideo</span>
+                  </p>
+                  <button class="btn btn-sm btn-outline-secondary" disabled>
+                    GET/POST
+                  </button>
+                  <input
+                    type="text"
+                    class="mt-2 form-control"
+                    readonly
+                    value="http://localhost:3000/api/postVideo?server=<server>&video_url=<tiktok_url>&render=<string|bool>"
+                  />
+                  <ul class="mt-2">
+                    <li>`server`: snaptik, tikmate, aweme (Insesitive-case)</li>
+                    <li>
+                      `video_url`: tiktok videos url, see example in placeholder
+                      form
+                    </li>
+                    <li>
+                      `render`: set as `true` when need response as rendered
+                      data to html content. and set as `false` when need
+                      response as `json string`. (default: true)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("footer") %>

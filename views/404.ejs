@@ -1,0 +1,36 @@
+<%- include("header") %>
+<div class="d-flex flex-column min-vh-100">
+  <div class="container-md">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-body">
+            <img
+              data-filled="light"
+              src="/images/crying-not-found.svg"
+              alt="crying"
+              class="img-thumbnail svg-crying"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-10 text-center fs-1 mt-2">
+        <p class="fw-bold">404</p>
+      </div>
+
+      <div class="col-md-10 text-center">
+        <button
+          class="btn btn-sm btn-outline-secondary mt-2 mb-3 me-2"
+          onclick="javascript: window.history.back();"
+        >
+          <i class="bi-skip-backward-btn me-1"></i>Back
+        </button>
+        <a href="/" class="btn btn-sm btn-outline-secondary mt-2 mb-3">
+          <i class="bi-house me-1"></i>Go Home
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("footer") %>
