@@ -54,12 +54,6 @@ additional:
 - `-t/--type`: media type to download.
 - `-V/--verbose`: enable debug mode.
 
-* ### Example (demo):
-  - image slider videos (mobile features) with debug on.
-    ![demo](src/cli-demo.svg)
-  - video with debug on.
-    ![demo2](src/cli-demo-2.svg)
-
 ### Setup Web Server:
 
 **Note:** make sure you've rename `.env-example` to `.env`
@@ -76,5 +70,11 @@ additional:
 npm run dev
 ```
 
-- demo site:
+### Example (demo):
+
+- image slider videos (mobile features) with debug on.
+  ![demo](src/cli-demo.svg)
+- video with debug on.
+  ![demo2](src/cli-demo-2.svg)
+- demo site
   `comming soon`
