@@ -24,7 +24,7 @@ app.use(
     {
       stream: {
         write: (message) => {
-          logger("debug", true).http(message);
+          logger({ level: "debug", longformat: true }).http(message);
         },
       },
     }

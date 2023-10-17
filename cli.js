@@ -38,7 +38,12 @@ const fnMain = async () => {
   const args = parser.parse_args();
   if (args.url && args.server && args.type) {
     console.log(`\n ${parser.description}\n`);
-    await _extract(args.url, args.server, args.type, args.verbose);
+    await _extract({
+      url: args.url,
+      server: args.server.toLowerCase(),
+      type: args.type.toLowerCase(),
+      verbose: args.verbose,
+    });
   } else {
     parser.print_help();
   }
