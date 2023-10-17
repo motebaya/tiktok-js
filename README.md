@@ -78,3 +78,7 @@ npm run dev
   ![demo2](src/cli-demo-2.svg)
 - demo site
   `comming soon`
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
