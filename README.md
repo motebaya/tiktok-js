@@ -1,4 +1,4 @@
-#### Tiktok JS
+## Tiktok JS
 
 <div align="center">
 NodeJS CLI/server tool for download tiktok videos without watermark. made with
