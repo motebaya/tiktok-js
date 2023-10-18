@@ -6,7 +6,7 @@
 import { ArgumentParser, RawTextHelpFormatter } from "argparse";
 import { _extract } from "./main.js";
 
-const fnMain = async () => {
+(async function () {
   const parser = new ArgumentParser({
     description: " TIktok CLI downloader\n © Copyright: @github.com/motebaya",
     formatter_class: RawTextHelpFormatter,
@@ -47,6 +47,4 @@ const fnMain = async () => {
   } else {
     parser.print_help();
   }
-};
-
-fnMain();
+})();
