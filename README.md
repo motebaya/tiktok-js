@@ -42,7 +42,7 @@ usage: cli [-h] [-u] [-s] [-t] [-V]
 optional arguments:
   -h, --help      show this help message and exit
   -u , --url      tiktok video url
-  -s , --server   choose server list: [snaptik, tikmate, aweme]
+  -s , --server   choose server list: [snaptik, tikmate, aweme, musicaldown]
   -t , --type     choose existing media type: [image, video, music]
 
 additional:
