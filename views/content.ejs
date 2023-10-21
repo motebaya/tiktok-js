@@ -40,11 +40,17 @@
       <div class="row align-items-md-start mb-3">
         <div class="col-md-12">
           <span class="mt-2 badge bg-secondary mb-1">Music:</span>
+          <% if (result.music.cover !== undefined){ %>
           <a href="/api/download?data=<%= encodeURIComponent(encryptStr(result.music.cover)); %>&dl=<%= result.music.title.replace(/\s/g, '-'); %>" target="_blank" rel="noopener noreferrer">
-            <img src="<%= result.music.cover %>" alt="avatar" class="img-thumbnail float-start me-2 mt-2 toast-avatar" style="height: auto; width: 80px" />
+            <img src="<%= result.music.cover %>" alt="avatar" class="img-thumbnail float-start me-2 mt-2" style="height: auto; width: 80px" />
           </a>
+          <% } else { %>
+          <img src="/images/no-avatar.png" alt="no-avatar" class="img-thumbnail float-start me-2 mt-2 toast-avatar" style="height: auto; width: 80px" />
+          <% } %>
           <div class="text-capitalize fs-7 hr">
+            <% if (result.music.author !== undefined){ %>
             <p class="my-0 fw-medium">&sharp; music by: <%= result.music.author %></p>
+            <% } %>
             <p class="my-0 fw-medium">
               &sharp; title: <%= result.music.title %>
             </p>
@@ -151,9 +157,15 @@
             <a href="<%= result.videos %>" class="btn btn-sm btn-outline-secondary me-1 mb-1" target="_blank" rel="noopener noreferrer"><i class="bi-filetype-mp4 me-1"></i>download [server1]</a>
           <% } %>
 
-          <%# only for aweme %>
+          <%# only for aweme and musicaldown %>
           <% if(result.music !== undefined){ %>
-          <a href="/api/download?data=<%= encodeURIComponent(encryptStr(result.music.url)); %>&dl=<%= result.video_id %>_music" class="btn btn-sm btn-outline-secondary me-1 mb-1" target="_blank" rel="noopener noreferrer"><i class="bi-file-earmark-music me-1"></i>Music [server1]</a>
+          <a href="
+          <% if (result.server === 'aweme'){ %>
+            /api/download?data=<%= encodeURIComponent(encryptStr(result.music.url)); %>&dl=<%= result.video_id %>_music
+          <% } else { %>
+            <%= result.music.url %>
+          <% } %>
+          " class="btn btn-sm btn-outline-secondary me-1 mb-1" target="_blank" rel="noopener noreferrer"><i class="bi-file-earmark-music me-1"></i>Music [server1]</a>
           <% } %>
         </div>
       </div>
