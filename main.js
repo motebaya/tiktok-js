@@ -6,6 +6,7 @@
 import Aweme from "./lib/extractor/Aweme.js";
 import Snaptik from "./lib/extractor/Snaptik.js";
 import Tikmate from "./lib/extractor/Tikmate.js";
+import Musicaldown from "./lib/extractor/Musicaldown.js";
 import { _download } from "./lib/downloader.js";
 import chalk from "chalk";
 import readlineSync from "readline-sync";
@@ -19,7 +20,7 @@ String.prototype.toTitleCase = function () {
   });
 };
 
-// DRY: only for avatar & music cover url
+// DRE: only for avatar & music cover url
 const getFormatExt = (url) => {
   const rawName = new RegExp(/\/([^/]+\.(jpeg|webp))/).exec(url);
   return rawName !== null ? rawName[2] : "jpeg";
@@ -29,6 +30,7 @@ export const SERVER_LIST = {
   aweme: Aweme,
   snaptik: Snaptik,
   tikmate: Tikmate,
+  musicaldown: Musicaldown,
 };
 
 /**
