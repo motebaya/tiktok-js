@@ -19,8 +19,8 @@ import { _extract } from "./main.js";
   parser.add_argument("-s", "--server", {
     type: "str",
     metavar: "",
-    choices: ["aweme", "snaptik", "tikmate"],
-    help: "choose server list: [snaptik, tikmate, aweme]",
+    choices: ["aweme", "snaptik", "tikmate", "musicaldown"],
+    help: "choose server list: [snaptik, tikmate, aweme, musicaldown]",
   });
   parser.add_argument("-t", "--type", {
     type: "str",
