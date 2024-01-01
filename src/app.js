@@ -14,7 +14,7 @@ import logger from "../lib/logger/logging.js";
 import morgan from "morgan";
 
 const app = express();
-export const base = url.fileURLToPath(new URL(".", import.meta.url));
+const base = url.fileURLToPath(new URL(".", import.meta.url));
 
 /**
  * middleware
