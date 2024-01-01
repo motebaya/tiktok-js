@@ -90,9 +90,6 @@ additional:
 
 ### Setup Web Server:
 
-> [!note]
-> make sure you have renamed `.env-example` to `.env`
-
 - run server on local:
 
 ```bash
