@@ -1,0 +1,464 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "TiktokJs-downloader",
+    "version": "2.3",
+    "description": "tiktok downloader tool",
+    "contact": {
+      "name": "L Mochino",
+      "url": "https://t.me/dvinchii"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "#"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost/api/v1",
+      "description": "default api route"
+    }
+  ],
+  "paths": {
+    "/aweme": {
+      "get": {
+        "tags": ["Aweme"],
+        "summary": "official tiktok api",
+        "description": "extract video data from with tiktok api",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Aweme"],
+        "summary": "official tiktok api",
+        "description": "extract video data with official tiktok api",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/musicaldown": {
+      "get": {
+        "tags": ["Musicaldown"],
+        "summary": "scraping from musicaldown.com",
+        "description": "extract from musicaldown.com",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Musicaldown"],
+        "summary": "extract from musicaldown.com",
+        "description": "extract from musicaldown.com",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/savetik": {
+      "get": {
+        "tags": ["Savetik"],
+        "summary": "scrape from savetik.co",
+        "description": "scrape from savetik.co",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Savetik"],
+        "summary": "scrape from savetik.co",
+        "description": "scrape from savetik.co",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/snaptik": {
+      "get": {
+        "tags": ["Snaptik"],
+        "summary": "scrape from snaptik.app",
+        "description": "scrape from snaptik.app",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Snaptik"],
+        "summary": "scrape from snaptik.app",
+        "description": "scrape from snaptik.app",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/snaptikpro": {
+      "get": {
+        "tags": ["SnpatikPro"],
+        "summary": "scrape from snaptik.pro",
+        "description": "scrape from snaptik.pro",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["SnpatikPro"],
+        "summary": "scrape from snaptik.pro",
+        "description": "scrape from snaptik.pro",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/ssstik": {
+      "get": {
+        "tags": ["Ssstik"],
+        "summary": "scrape from ssstik.io",
+        "description": "scrape from ssstik.io",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Ssstik"],
+        "summary": "scrape from ssstik.io",
+        "description": "scrape from ssstik.io",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/tikcdn": {
+      "get": {
+        "tags": ["Tikcdn"],
+        "summary": "scrape from tikcdn.app",
+        "description": "scrape from tikcdn.app",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Tikcdn"],
+        "summary": "scrape from tikcdn.app",
+        "description": "scrape from tikcdn.app",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/tikmate": {
+      "get": {
+        "tags": ["Tikmate"],
+        "summary": "scrape from tikmate.online",
+        "description": "scrape from tikmate.online",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Tikmate"],
+        "summary": "scrape from tikmate.online",
+        "description": "scrape from tikmate.online",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/tiktokdownloadr": {
+      "get": {
+        "tags": ["Tiktokdownlodr"],
+        "summary": "scrape from tiktokdownloadr.com",
+        "description": "scrape from tiktokdownloadr.com",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Tiktokdownlodr"],
+        "summary": "scrape from tiktokdownloadr.com",
+        "description": "scrape from tiktokdownloadr.com",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/tikwm": {
+      "get": {
+        "tags": ["Tikwm"],
+        "summary": "scrape from tikwm.com",
+        "description": "scrape from tikwm.com",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Tikwm"],
+        "summary": "scrape from tikwm.com",
+        "description": "scrape from tikwm.com",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    },
+    "/ttdownloader": {
+      "get": {
+        "tags": ["Ttdownloader"],
+        "summary": "scrape from ttdownloader.com",
+        "description": "scrape from ttdownloader.com",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Ttdownloader"],
+        "summary": "scrape from ttdownloader.com",
+        "description": "scrape from ttdownloader.com",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "success extract video data"
+          },
+          "405": {
+            "description": "failed extract video data"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "requestBodies": {
+      "onlyUrl": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/onlyUrl"
+            },
+            "examples": {
+              "web url": { "$ref": "#/components/examples/weburl" },
+              "mobile url": { "$ref": "#/components/examples/mobileurl" }
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "weburl": {
+        "description": "tiktok video url from website",
+        "value": {
+          "url": "https://www.tiktok.com/@komifish/video/7262073386573106437"
+        }
+      },
+      "mobileurl": {
+        "description": "tiktok video url from mobile app",
+        "value": {
+          "url": "https://vt.tiktok.com/ZSNtQrjFb/"
+        }
+      }
+    },
+    "parameters": {
+      "onlyUrl": {
+        "name": "url",
+        "required": true,
+        "description": "tiktok video url",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": false
+        },
+        "examples": {
+          "web url": {
+            "description": "tiktok url from desktop web",
+            "value": "https://www.tiktok.com/@komifish/video/7262073386573106437"
+          },
+          "mobile url": {
+            "description": "tiktok url from mobile",
+            "value": "https://vt.tiktok.com/ZSNtQrjFb/"
+          }
+        }
+      }
+    },
+    "schemas": {
+      "onlyUrl": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "required": true,
+            "default": "https://vt.tiktok.com/ZSNtU9qCK/"
+          }
+        }
+      }
+    }
+  }
+}
