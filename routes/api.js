@@ -323,6 +323,7 @@ const options = {
 };
 routerAPI.use(
   "/docs",
+  express.static(path.join(process.cwd(), "public")),
   swaggerUi.serve,
   swaggerUi.setup(swaggerJSDoc(options), {
     customSiteTitle: "TiktokJS - api documentation",
