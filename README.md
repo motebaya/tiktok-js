@@ -28,19 +28,19 @@ NodeJS CLI and web server tool for downloading TikTok media such as images slide
 
 the list feaures media supported
 
-| Name            | Host                | Images  | Video   | Music   | Img[slideshow] |
-| --------------- | ------------------- | ------- | ------- | ------- | -------------- |
-| Aweme           | api-h2.tiktokv.com  | &check; | &check; | &check; |                |
-| Musicaldown     | musicaldown.com     | &check; | &check; | &check; | &check;        |
-| Savetik         | savetik.co          | &check; | &check; | &check; | &check;        |
-| Snaptik         | snaptik.app         | &check; | &check; | &check; | &check;        |
-| SnaptikPro      | snaptik.pro         |         | &check; | &check; |                |
-| Ssstik          | ssstik.io           | &check; | &check; | &check; | &check;        |
-| Tikcdn          | tikcdn.app          | &check; | &check; | &check; |                |
-| Tikmate         | tikmate.online      | &check; | &check; | &check; | &check;        |
-| Tiktokdownloadr | tiktokdownloadr.com |         | &check; | &check; |                |
-| Tikwm           | tikwm.com           | &check; | &check; | &check; |                |
-| Ttdownloader    | ttdownloader.com    |         | &check; | &check; |                |
+| Name            | Host                | Images  | Video   | Music   | Videos[slideshow] |
+| --------------- | ------------------- | ------- | ------- | ------- | ----------------- |
+| Aweme           | api-h2.tiktokv.com  | &check; | &check; | &check; |                   |
+| Musicaldown     | musicaldown.com     | &check; | &check; | &check; | &check;           |
+| Savetik         | savetik.co          | &check; | &check; | &check; | &check;           |
+| Snaptik         | snaptik.app         | &check; | &check; | &check; | &check;           |
+| SnaptikPro      | snaptik.pro         |         | &check; | &check; |                   |
+| Ssstik          | ssstik.io           | &check; | &check; | &check; | &check;           |
+| Tikcdn          | tikcdn.app          | &check; | &check; | &check; |                   |
+| Tikmate         | tikmate.online      | &check; | &check; | &check; | &check;           |
+| Tiktokdownloadr | tiktokdownloadr.com |         | &check; | &check; |                   |
+| Tikwm           | tikwm.com           | &check; | &check; | &check; |                   |
+| Ttdownloader    | ttdownloader.com    |         | &check; | &check; |                   |
 
 > [!important]
 > Some servers support rendering image slide show to video, but sometimes it may not work due to issues with the server itself (which are beyond my control). the same applies to other potential issues.
