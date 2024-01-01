@@ -8,7 +8,7 @@ import Utils from "../lib/Util.js";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import { serverList } from "../main.js";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { extractor } from "../lib/extractor/index.js";
 import { query, param, validationResult, body, oneOf } from "express-validator";
 import path from "node:path";
@@ -315,7 +315,12 @@ routerAPI
  * swagger UI, openapi config.
  */
 const definition = JSON.parse(
-  readFileSync(path.join(base, "api-docs.json"), "utf-8")
+  readFileSync(
+    existsSync("/openapi/docs.json")
+      ? "/openapi/docs.json"
+      : path.join(base, "../public/openapi/docs.json"),
+    "utf-8"
+  )
 );
 const options = { definition, apis: [path.join(base, "api.js")] };
 routerAPI.use(
