@@ -5,10 +5,16 @@
 import express from "express";
 const router = express.Router();
 import routerAPI from "./api.js";
+import Utils from "../lib/Util.js";
+import { extractor } from "../lib/extractor/index.js";
 
 // index home
 router.get("/", (req, res) => {
-  res.status(200).render("index", { title: "Home" });
+  res.status(200).render("index", {
+    title: "Home",
+    serverList: extractor,
+    Utils: Utils,
+  });
 });
 
 router.get("/about", (req, res) => {
