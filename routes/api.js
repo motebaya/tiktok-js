@@ -323,12 +323,15 @@ const options = {
 };
 routerAPI.use(
   "/docs",
-  express.static(path.join(process.cwd(), "public")),
   swaggerUi.serve,
   swaggerUi.setup(swaggerJSDoc(options), {
     customSiteTitle: "TiktokJS - api documentation",
     customfavIcon: "/images/logo.ico",
-    customCssUrl: "/css/custom.min.css",
+    customCssUrl: ["/css/custom.min.css", "/css/swagger-ui.css"],
+    customJs: [
+      "/js/swagger-ui-bundle.js",
+      "/js/swagger-ui-standalone-preset.js",
+    ],
   })
 );
 
