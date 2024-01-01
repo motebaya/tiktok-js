@@ -1,8 +1,35 @@
 <%- include('header') %>
-<div class="d-flex flex-column min-vh-100">
+<div class="d-flex flex-column">
   <div class="container-md">
-    <%- include('form') -%>
+    <%- include('form', {serverList, Utils}) -%>
     <div class="row mb-3" id="content" style="display: none"></div>
+
+    <div
+      class="row justify-content-center mb-3"
+      id="tikwm-result"
+      style="display: none"
+    >
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <a
+              href="#"
+              data-toggle="popover"
+              data-trigger="focus"
+              data-placement="right"
+              class="nav-link"
+              ><i class="bi-info-circle me-1"></i> Tips!
+            </a>
+          </div>
+          <div class="card-body mx-0">
+            <!-- images -->
+            <div class="row mb-3 text-center" id="tikwm-images"></div>
+            <!-- end images -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
   </div>
-  <%- include('footer') %>
+  <%- include('footer', {Utils}) %>
 </div>
