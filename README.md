@@ -90,15 +90,41 @@ additional:
 
 ### Setup Web Server:
 
-- run server on local:
+- Run on local server:
 
 ```bash
- ❯ npm run start/dev
+ ❯ npm run dev
+> tiktok-js@3.1.0 dev
+> nodemon src/index.js
+[nodemon] 3.0.1
+[nodemon] reading config ./package.json
+[nodemon] to restart at any time, enter `rs`
+[nodemon] or send SIGHUP to 1755830 to restart
+[nodemon] ignoring: **/test/** **/trash/**
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js
+[nodemon] starting `node src/index.js`
+[nodemon] forking
+[nodemon] child pid: 1755843
+[nodemon] watching 60 files
+app listening on port 3000
+```
 
-> tiktok-js@2.1.1 start
-> node ./index.js
+then open url http://localhost:3000 in your browser.
 
-App listening on port 3000
+- Deploying to vercel with [Vercel CLI](https://vercel.com/docs/cli), for the first time you need to login first with your vercel account.
+
+```bash
+❯ vercel --prod
+Vercel CLI 33.0.1
+? Set up and deploy “./tiktok-js”? [Y/n] y
+? Which scope do you want to deploy to? username
+? Link to existing project? [y/N] n
+? What’s your project’s name? tiktokjs-downloader
+? In which directory is your code located? ./
+🔗  Linked to username/tiktokjs-downloader (created .vercel and added it to .gitignore)
+🔍  Inspect: https://vercel.com/username/tiktokjs-downloader/<unique> [7s]
+✅  Production: https://tiktokjs-downloader-<unique>-username.vercel.app [7s]
 ```
 
 ### Demo:
@@ -123,7 +149,7 @@ App listening on port 3000
   </details>
 
 - Web:
-  https://vecel.com
+  https://tiktokjs-downloader.vercel.app/
 
 ## License
 
