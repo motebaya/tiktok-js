@@ -1,0 +1,30 @@
+{
+  "status": true,
+  "description": "ughhh #pgr #selena ",
+  "video_id": "7262073386573106437",
+  "author": {
+    "avatar": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fcf816c056ab8dc37a0f49936649b049~c5_720x720.jpeg?lk3s=45126217&x-expires=1703919600&x-signature=qpbYkfm%2BZt7PYb79nrcehS4UnaU%3D",
+    "name": "Kim",
+    "bio": "ntah lah",
+    "username": "komifish"
+  },
+  "music": {
+    "title": "original sound - Kim",
+    "author": "Kim",
+    "cover": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/fcf816c056ab8dc37a0f49936649b049~c5_1080x1080.jpeg?lk3s=45126217&x-expires=1703919600&x-signature=JUQqPPrnOvagqlVnfyhXHMgXQTs%3D",
+    "url": "https://sf16-ies-music-va.tiktokcdn.com/obj/musically-maliva-obj/7262073408996805382.mp3"
+  },
+  "stats": {
+    "total_share": 0,
+    "total_download": 0,
+    "total_views": 5,
+    "total_comment": 0
+  },
+  "isImage": false,
+  "videos": [
+    "https://v16m-default.akamaized.net/073392a81f7ea180ef3cfe215c5b81f8/658ec4cb/video/tos/useast2a/tos-useast2a-pve-0068/oIhHMCICIgANVEHIQyBoVOg5kAfitEZzAUAZ8J/?a=0&ch=0&cr=0&dr=0&lr=all&cd=0%7C0%7C0%7C0&br=3836&bt=1918&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&cs=0&ds=6&ft=e-t4p2GTjYF9wkXAXsW~Kb~OQqhUtopi7d_FdZBMEeF&mime_type=video_mp4&qs=0&rc=NjdmMzc2PDU1Zjk1Z2g5aEBpM2dtODw6ZmY0bTMzNzczM0AuXl8wNi5jNmExNmFjNjNjYSM0ZzZkcjRnLzFgLS1kMTZzcw%3D%3D&l=202312290708166F1758E77B7AC332AFEA&btag=e00088000",
+    "https://v16m.byteicdn.com/073392a81f7ea180ef3cfe215c5b81f8/658ec4cb/video/tos/useast2a/tos-useast2a-pve-0068/oIhHMCICIgANVEHIQyBoVOg5kAfitEZzAUAZ8J/?a=0&ch=0&cr=0&dr=0&lr=all&cd=0%7C0%7C0%7C0&br=3836&bt=1918&bti=OHYpOTY0Zik3OjlmOm01MzE6ZDQ0MDo%3D&cs=0&ds=6&ft=e-t4p2GTjYF9wkXAXsW~Kb~OQqhUtopi7d_FdZBMEeF&mime_type=video_mp4&qs=0&rc=NjdmMzc2PDU1Zjk1Z2g5aEBpM2dtODw6ZmY0bTMzNzczM0AuXl8wNi5jNmExNmFjNjNjYSM0ZzZkcjRnLzFgLS1kMTZzcw%3D%3D&l=202312290708166F1758E77B7AC332AFEA&btag=e00088000&cc=10",
+    "https://api.tiktokv.com/aweme/v1/play/?video_id=v09044g40000cj412cjc77u9g59jjd70&line=0&is_play_url=1&source=PackSourceEnum_FEED&file_id=fe669efdd2964cd292f9139430bca413&item_id=7262073386573106437&signaturev3=dmlkZW9faWQ7ZmlsZV9pZDtpdGVtX2lkLjM1ZGNjYzRiM2VjNjkyMjcwYWNkM2Y4MmUwMjg2NTA4"
+  ],
+  "thumbnail": "https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/86477aa3886a4f49aeffc66261ce7c91_1690833228~noop.jpeg?lk3s=d05b14bd&x-expires=1703919600&x-signature=YK%2FUxJ7hKb9lb%2F9XIjZ88h%2Ba7Ks%3D&s=FEED&se=false&sh=&sc=cover&l=202312290708166F1758E77B7AC332AFEA"
+}
