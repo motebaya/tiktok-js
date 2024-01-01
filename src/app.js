@@ -57,11 +57,11 @@ app.use(
   })
 );
 
-app.set("views", path.join(base, "views"));
+app.set("views", path.join(base, "../views"));
 app.set("view engine", "ejs");
 
 // static set
-app.use(express.static(path.join(base, "public"), { etag: true }));
+app.use(express.static(path.join(base, "../public"), { etag: true }));
 // router
 app.use(router);
 
