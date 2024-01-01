@@ -1,5 +1,4 @@
 cli.js
-lib/Users.js
 test/**
 .gitignore
 babel.config.json
