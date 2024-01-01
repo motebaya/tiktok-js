@@ -1,3 +1,4 @@
 .env
 .prettierignore
 node_modules/
+.vercel
