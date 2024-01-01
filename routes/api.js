@@ -314,6 +314,10 @@ routerAPI
 /**
  * swagger UI, openapi config.
  */
+console.log(process.cwd());
+console.log(path.join(process.cwd(), "routes/docs.json"));
+console.log(readdirSync(process.cwd()));
+console.log(readdirSync(path.join(process.cwd(), "routes")));
 const definition = JSON.parse(
   readFileSync(path.join(process.cwd(), "routes/docs.json"), "utf-8")
 );

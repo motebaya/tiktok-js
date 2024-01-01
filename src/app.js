@@ -12,6 +12,7 @@ import minifyHTML from "express-minify-html";
 import bodyParser from "body-parser";
 import logger from "../lib/logger/logging.js";
 import morgan from "morgan";
+import fs from "node:fs";
 
 const app = express();
 const base = url.fileURLToPath(new URL(".", import.meta.url));
@@ -56,7 +57,9 @@ app.use(
     },
   })
 );
-
+console.log(process.cwd());
+console.log(fs.readdirSync(process.cwd()));
+console.log(fs.readdirSync(path.join(process.cwd(), "views")));
 app.set("views", path.join(base, "../views"));
 app.set("view engine", "ejs");
 
