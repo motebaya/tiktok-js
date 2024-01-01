@@ -11,6 +11,8 @@ import { serverList } from "../main.js";
 import { readFileSync } from "node:fs";
 import { extractor } from "../lib/extractor/index.js";
 import { query, param, validationResult, body, oneOf } from "express-validator";
+import { base } from "../src/app.js";
+import path from "node:path";
 
 const routerAPI = express.Router({
   caseSensitive: true,
@@ -310,8 +312,10 @@ routerAPI
 /**
  * swagger UI, openapi config.
  */
-const definition = JSON.parse(readFileSync("./routes/api-docs.json", "utf-8"));
-const options = { definition, apis: ["./routes/api.js"] };
+const definition = JSON.parse(
+  readFileSync(path.join(base, "routes/api-docs.json"), "utf-8")
+);
+const options = { definition, apis: [path.join(base, "routes/api.js")] };
 routerAPI.use(
   "/docs",
   swaggerUi.serve,
