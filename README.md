@@ -90,7 +90,7 @@ additional:
 
 ### Setup Web Server:
 
-- Run on local server:
+- **Run on local server**:
 
 ```bash
  ❯ npm run dev
@@ -108,11 +108,10 @@ additional:
 [nodemon] child pid: 1755843
 [nodemon] watching 60 files
 app listening on port 3000
+# local address: http://localhost:3000
 ```
 
-then open url http://localhost:3000 in your browser.
-
-- Deploying to vercel with [Vercel CLI](https://vercel.com/docs/cli), for the first time you need to login first with your vercel account.
+- **Deploying to vercel with [Vercel CLI](https://vercel.com/docs/cli), for the first time you need to login first with your vercel account.**
 
 ```bash
 ❯ vercel --prod
@@ -121,7 +120,7 @@ Vercel CLI 33.0.1
 ? Which scope do you want to deploy to? username
 ? Link to existing project? [y/N] n
 ? What’s your project’s name? tiktokjs-downloader
-? In which directory is your code located? ./
+? In which directory is your code located? ./ (just enter)
 🔗  Linked to username/tiktokjs-downloader (created .vercel and added it to .gitignore)
 🔍  Inspect: https://vercel.com/username/tiktokjs-downloader/<unique> [7s]
 ✅  Production: https://tiktokjs-downloader-<unique>-username.vercel.app [7s]
@@ -129,26 +128,36 @@ Vercel CLI 33.0.1
 
 ### Demo:
 
-- CLI:
+- **CLI:**
   <details>
   <summary>
-    downloading videos with images slider type.
+    downloading all image slideshow with aweme server (verbose on)
   </summary>
 
-  ![demo](assets/cli-demo.svg)
+  ![demo](assets/iamge-slideshow.svg)
 
   </details>
 
   <details>
   <summary>
-    downloading video with debug on.
+    downloading video with aweme server (verbose on)
   </summary>
 
-  ![demo2](assets/cli-demo-2.svg)
+  ![demo2](assets/aweme-video.svg)
 
   </details>
 
-- Web:
+  <details>
+  <summary>
+    downloading music from image slideshow (verbose on)
+  </summary>
+
+  ![demo2](assets/image-music.svg)
+
+  </details>
+
+- **Web:**
+
   https://tiktokjs-downloader.vercel.app/
 
 ## License
