@@ -2,7 +2,7 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <form method="POST">
+        <form>
           <label for="video_url" class="float-start form-label text-secondary"
             >Not all server have same features/result, visit:
             <a
@@ -39,7 +39,7 @@
               placeholder="#"
               class="form-control"
               aria-describedby="url"
-              pattern="^(?:http[s]:\/\/vt\.tiktok\.com\/[\w+]*|https:\/\/www\.tiktok\.com\/@[a-zA-Z0-9_\.]{2,24}\/video\/[0-9]*|^(?:@)?[a-zA-Z0-9_\.]{2,24})$"
+              pattern="^(?:http[s]:\/\/vt\.tiktok\.com\/[\w+]*(\/*)?|https:\/\/www\.tiktok\.com\/@[a-zA-Z0-9_\.]{2,24}\/video\/[0-9]*(\/.*)?(\?.*)?|^(?:@)?[a-zA-Z0-9_\.]{2,24})$"
               title="only allowed tiktok username & tiktok video url"
               required
             />
