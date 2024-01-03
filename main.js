@@ -9,6 +9,7 @@ import Parameter from "parameter";
 import assert from "node:assert";
 import Users from "./lib/Users.js";
 import fs from "node:fs";
+import Utils from "./lib/Util.js";
 import { createInterface } from "node:readline";
 import { extractor } from "./lib/extractor/index.js";
 
@@ -243,12 +244,6 @@ export class _Main {
           type === "video",
         getmusic: type === "music" && server === "musicaldown",
       });
-      /**
-       * IM LAZY GUY TO MAKE UNIT TEST.
-       */
-      const content = JSON.stringify(result, 2, null);
-      fs.writeFileSync(`${server}-${type}.json`, content);
-
       if (result.status) {
         console.log(
           ` ${chalk.white("-".repeat(30))}\n ${chalk.white("-".repeat(30))}`
