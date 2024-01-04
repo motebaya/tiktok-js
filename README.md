@@ -134,7 +134,7 @@ Vercel CLI 33.0.1
     downloading all image slideshow with aweme server (verbose on)
   </summary>
 
-  ![demo](assets/iamge-slideshow.svg)
+  ![demo](assets/image-slideshow.svg)
 
   </details>
 
