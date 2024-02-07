@@ -2,7 +2,7 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <form>
+        <form method="POST">
           <label for="video_url" class="float-start form-label text-secondary"
             >Not all server have same features/result, visit:
             <a
@@ -41,15 +41,13 @@
               aria-describedby="url"
               pattern="^(?:http[s]:\/\/vt\.tiktok\.com\/[\w+]*(\/*)?|https:\/\/www\.tiktok\.com\/@[a-zA-Z0-9_\.]{2,24}\/video\/[0-9]*(\/.*)?(\?.*)?|^(?:@)?[a-zA-Z0-9_\.]{2,24})$"
               title="only allowed tiktok username & tiktok video url"
-              required
-            />
+              required />
             <input type="hidden" name="type" value="html" />
           </div>
           <button
             id="btn-go"
             type="submit"
-            class="btn btn-outline-secondary btn-sm"
-          >
+            class="btn btn-outline-secondary btn-sm">
             <i class="bi-send me-2"></i>Go
           </button>
           <div class="mt-3" id="warning-info" style="display: none">
@@ -68,8 +66,7 @@
     class="toast liveToast"
     role="alert"
     aria-live="assertive"
-    aria-atomic="true"
-  >
+    aria-atomic="true">
     <div class="toast-header">
       <i class="bi-info-circle me-1"></i>
       <strong class="me-auto">Tips</strong>
@@ -78,8 +75,7 @@
         type="button"
         class="btn-close"
         data-bs-dismiss="toast"
-        aria-label="Close"
-      ></button>
+        aria-label="Close"></button>
     </div>
     <div class="toast-body">Hello, buddy :V</div>
   </div>
