@@ -163,7 +163,7 @@ Vercel CLI 33.0.1
 
 
 > [!warning]
-> the latest demo website was deployed on **February 2, 2024**, and it's not always updated or redeployed to follow the latest update.
+> The latest demo website was deployed on **February 2, 2024**, and it's not always updated or redeployed to follow the latest update!!. you can deploy /test it self by following [Setup web server](https://github.com/motebaya/tiktok-js#setup-web-server)!.
 
 ## License
 
