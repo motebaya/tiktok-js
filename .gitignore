@@ -1,3 +1,5 @@
 .prettierignore
 node_modules/
 .vercel
+dev/**
+tiktok-downloader-output
