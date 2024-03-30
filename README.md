@@ -88,6 +88,8 @@ additional:
 > downloaded media in CLI will be saved in current directory with name `tiktok-downloader-output`
 > see in [downloader.js](lib/downloader.js#68)
 
+> it might take a bit longer when using `aweme` server, cause the API has been updated
+
 ### Setup Web Server:
 
 - **Run on local server**:
