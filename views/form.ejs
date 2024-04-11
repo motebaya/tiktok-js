@@ -1,82 +1,78 @@
-<div class="row justify-content-center mb-3">
-  <div class="col-12">
-    <div class="card">
-      <div class="card-body">
-        <form method="POST">
-          <label for="video_url" class="float-start form-label text-secondary"
-            >Not all server have same features/result, visit:
-            <a
-              href="https://github.com/motebaya/tiktok-js?tab=readme-ov-file#Features-list"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Features list</a
-            >
-            to see.</label
-          >
-          <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01"
-              ><i class="bi-life-preserver"></i
-            ></label>
-            <select name="server" class="form-select" id="inputGroupSelect01">
-              <option value="default" selected>Choose Server...</option>
-              <% for (var [server, instance] of Object.entries(serverList)){ %>
-              <option value="<%= server %>">
-                <%= `${Utils.toTitleCase(server)}
-                (${Utils.getHostName(instance.host)})` %>
-              </option>
-              <% }; %>
-            </select>
-          </div>
-          <label for="video_url" class="float-start form-label text-secondary"
-            >Tiktok videos url or username</label
-          >
-          <div class="input-group mb-3">
-            <span class="input-group-text"><i class="bi-yelp"></i></span>
-            <input
-              name="url"
-              id="url"
-              type="text"
-              placeholder="#"
-              class="form-control"
-              aria-describedby="url"
-              pattern="^(?:http[s]:\/\/vt\.tiktok\.com\/[\w+]*(\/*)?|https:\/\/www\.tiktok\.com\/@[a-zA-Z0-9_\.]{2,24}\/video\/[0-9]*(\/.*)?(\?.*)?|^(?:@)?[a-zA-Z0-9_\.]{2,24})$"
-              title="only allowed tiktok username & tiktok video url"
-              required />
-            <input type="hidden" name="type" value="html" />
-          </div>
-          <button
-            id="btn-go"
-            type="submit"
-            class="btn btn-outline-secondary btn-sm">
-            <i class="bi-send me-2"></i>Go
-          </button>
-          <div class="mt-3" id="warning-info" style="display: none">
-            <p class="text-warning">
-              &#9888; This server may take a bit long time for render images to
-              video and getting video info from webpage
-            </p>
-          </div>
-        </form>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://telegra.ph/file/9a27b806ef62320e2271e.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row justify-content-center mb-3" style="background-image: url('https://telegra.ph/file/9a27b806ef62320e2271e.jpg'); background-size: cover; background-position: center;">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST">
+                        <label for="video_url" class="float-start form-label text-secondary">
+                            Not all server have same features/result, visit:
+                            <a href="https://github.com/motebaya/tiktok-js?tab=readme-ov-file#Features-list" target="_blank" rel="noopener noreferrer">Features list</a>
+                            to see.
+                        </label>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">
+                                <i class="bi-life-preserver"></i>
+                            </label>
+                            <select name="server" class="form-select" id="inputGroupSelect01">
+                                <option value="default" selected>Choose Server...</option>
+                                <% for (var [server, instance] of Object.entries(serverList)){ %>
+                                <option value="<%= server %>">
+                                    <%= `${Utils.toTitleCase(server)}
+                                    (${Utils.getHostName(instance.host)})` %>
+                                </option>
+                                <% }; %>
+                            </select>
+                        </div>
+                        <label for="video_url" class="float-start form-label text-secondary">
+                            Tiktok videos url or username
+                        </label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="bi-yelp"></i></span>
+                            <input name="url" id="url" type="text" placeholder="#" class="form-control" aria-describedby="url" pattern="^(?:http[s]:\/\/vt\.tiktok\.com\/[\w+]*(\/*)?|https:\/\/www\.tiktok\.com\/@[a-zA-Z0-9_\.]{2,24}\/video\/[0-9]*(\/.*)?(\?.*)?|^(?:@)?[a-zA-Z0-9_\.]{2,24})$" title="only allowed tiktok username & tiktok video url" required />
+                            <input type="hidden" name="type" value="html" />
+                        </div>
+                        <button id="btn-go" type="submit" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi-send me-2"></i>Go
+                        </button>
+                        <div class="mt-3" id="warning-info" style="display: none">
+                            <p class="text-warning">
+                                &#9888; This server may take a bit long time for render images to video and getting video info from webpage
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div
-    class="toast liveToast"
-    role="alert"
-    aria-live="assertive"
-    aria-atomic="true">
-    <div class="toast-header">
-      <i class="bi-info-circle me-1"></i>
-      <strong class="me-auto">Tips</strong>
-      <small>just now</small>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="toast"
-        aria-label="Close"></button>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi-info-circle me-1"></i>
+                <strong class="me-auto">Tips</strong>
+                <small>just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">Hello, buddy :V</div>
+        </div>
     </div>
-    <div class="toast-body">Hello, buddy :V</div>
-  </div>
-</div>
+</body>
+
+</html>
