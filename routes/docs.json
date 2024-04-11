@@ -5,8 +5,8 @@
     "version": "2.3",
     "description": "tiktok downloader tool",
     "contact": {
-      "name": "L Mochino",
-      "url": "https://t.me/dvinchii"
+      "name": "Ins",
+      "url": "https://www.tiktok.com/@ins_mys3lv"
     },
     "license": {
       "name": "MIT",
@@ -15,7 +15,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost/api/v1",
+      "url": "https://tiktok-js-ins.vercel.app/api/v1",
       "description": "default api route"
     }
   ],
@@ -32,10 +32,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -46,10 +46,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -66,10 +66,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -80,10 +80,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -100,10 +100,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -114,10 +114,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -134,10 +134,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -148,10 +148,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -168,10 +168,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -182,10 +182,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -202,10 +202,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -216,10 +216,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -236,10 +236,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -250,10 +250,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -270,10 +270,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -284,10 +284,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -304,10 +304,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -318,10 +318,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -338,10 +338,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -352,10 +352,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -372,10 +372,10 @@
         ],
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       },
@@ -386,10 +386,10 @@
         "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
         "responses": {
           "200": {
-            "description": "success extract video data"
+            "description": "berhasil mengekstrak data video"
           },
           "405": {
-            "description": "failed extract video data"
+            "description": "gagal mengekstrak data video"
           }
         }
       }
@@ -416,13 +416,13 @@
       "weburl": {
         "description": "tiktok video url from website",
         "value": {
-          "url": "https://www.tiktok.com/@komifish/video/7262073386573106437"
+          "url": "https://vt.tiktok.com/ZSFs1FYbx/"
         }
       },
       "mobileurl": {
-        "description": "tiktok video url from mobile app",
+        "description": "url video tiktok dari aplikasi seluler",
         "value": {
-          "url": "https://vt.tiktok.com/ZSNtQrjFb/"
+          "url": "https://vt.tiktok.com/ZSFs1YCUR/"
         }
       }
     },
@@ -439,11 +439,11 @@
         "examples": {
           "web url": {
             "description": "tiktok url from desktop web",
-            "value": "https://www.tiktok.com/@komifish/video/7262073386573106437"
+            "value": "https://vt.tiktok.com/ZSFs1FYbx/"
           },
           "mobile url": {
             "description": "tiktok url from mobile",
-            "value": "https://vt.tiktok.com/ZSNtQrjFb/"
+            "value": "https://vt.tiktok.com/ZSFs1YCUR/"
           }
         }
       }
@@ -455,7 +455,7 @@
           "url": {
             "type": "string",
             "required": true,
-            "default": "https://vt.tiktok.com/ZSNtU9qCK/"
+            "default": "https://vt.tiktok.com/ZSFs1N2cx/"
           }
         }
       }
