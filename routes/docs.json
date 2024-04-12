@@ -395,6 +395,72 @@
       }
     }
   },
+  "/toanime": {
+      "get": {
+        "tags": ["ToAnime"],
+        "summary": "Convert video to anime",
+        "description": "Converts a video to anime using Skizo API",
+        "parameters": [
+          {
+            "name": "apikey",
+            "in": "query",
+            "description": "Your Skizo API key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "url",
+            "in": "query",
+            "description": "URL of the video to be converted",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "description": "Status of the conversion process"
+                    },
+                    "result": {
+                      "type": "string",
+                      "description": "URL of the converted anime video"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Description of the error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components": {
     "requestBodies": {
       "onlyUrl": {
