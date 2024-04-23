@@ -13,6 +13,9 @@ import Utils from "../lib/Util.js";
 export const rateLimiter = rateLimit({
   windowMs: 24 * 60 * 60 * 1000,
   max: 5,
+  keyGenerator: function (req) {
+    return req.headers["x-real-ip"];
+  },
   handler: async (req, res, next) => {
     res.status(429).json({
       status: "failed",
