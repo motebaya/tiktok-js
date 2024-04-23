@@ -38,6 +38,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("json spaces", 2);
+app.set("trust proxy", true);
 
 /**
  * middleware
