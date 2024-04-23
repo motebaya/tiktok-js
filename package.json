@@ -1,6 +1,6 @@
 {
   "name": "tiktok-js",
-  "version": "3.1.0",
+  "version": "3.2.1",
   "description": "Node js CLI and web server tool for download tiktok videos without watermark",
   "main": "src/index.js",
   "scripts": {
@@ -47,6 +47,7 @@
     "express": "^4.18.2",
     "express-minify": "^1.0.0",
     "express-minify-html": "^0.10.0",
+    "express-rate-limit": "^7.2.0",
     "express-validator": "^7.0.1",
     "he": "^1.2.0",
     "js-yaml": "^4.1.0",

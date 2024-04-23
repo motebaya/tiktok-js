@@ -13,6 +13,7 @@ import { extractor } from "../lib/extractor/index.js";
 import { query, param, validationResult, body, oneOf } from "express-validator";
 import path from "node:path";
 import url from "node:url";
+import { rateLimiter } from "./ratelimiter.js";
 
 const base = url.fileURLToPath(new URL(".", import.meta.url));
 
@@ -20,6 +21,12 @@ const routerAPI = express.Router({
   caseSensitive: true,
   strict: true,
 });
+
+/**
+ * middleware
+ * :limiter
+ */
+routerAPI.use(rateLimiter);
 
 /**
  * router video post handler
