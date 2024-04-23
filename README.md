@@ -161,9 +161,8 @@ Vercel CLI 33.0.1
 
   https://tiktokjs-downloader.vercel.app/
 
-
 > [!warning]
-> The latest demo website was deployed on **February 2, 2024**, and it's not always updated or redeployed to follow the latest update!!. you can deploy /test it self by following [Setup web server](https://github.com/motebaya/tiktok-js#setup-web-server)!.
+> The latest demo website was deployed on **Apr 23, 2024** with rate limit 10x (same as server count) `API` hit every 24 Hours, and it's maybe not always updated or redeployed to follow the latest update!!. you can deploy /test it self by following [Setup web server](https://github.com/motebaya/tiktok-js#setup-web-server)!.
 
 ## License
 
