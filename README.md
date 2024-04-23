@@ -21,6 +21,7 @@ NodeJS CLI and web server tool for downloading TikTok media such as images slide
 
 - Available for CLI & web server.
 - Asynchronous & concurrency download.
+- API rate limiter with `express-rate-limit`
 - More than 10 server are available for downloading .
 - Support media music, avatar, cover music, thumbnail and etc.
 
