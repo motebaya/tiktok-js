@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-image: url('https://telegra.ph/file/9a27b806ef62320e2271e.jpg');
@@ -15,18 +15,25 @@
         }
     </style>
 </head>
-
 <body>
-    <div class="row justify-content-center mb-3" style="background-image: url('https://telegra.ph/file/9a27b806ef62320e2271e.jpg'); background-size: cover; background-position: center;">
+    <div class="row justify-content-center mb-3">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <form method="POST">
                         <label for="video_url" class="float-start form-label text-secondary">
                             Not all server have same features/result, visit:
-                            <a href="https://github.com/motebaya/tiktok-js?tab=readme-ov-file#Features-list" target="_blank" rel="noopener noreferrer">Features list</a>
+                            <a class="text-decoration-underline text-secondary" data-bs-toggle="collapse" href="#featureList" role="button" aria-expanded="false" aria-controls="featureList">Features list</a>
                             to see.
                         </label>
+                        <div class="collapse" id="featureList">
+                            <ul class="list-group mt-2 mb-3">
+                                <li class="list-group-item">Feature 1</li>
+                                <li class="list-group-item">Feature 2</li>
+                                <li class="list-group-item">Feature 3</li>
+                                <!-- Add more features as needed -->
+                            </ul>
+                        </div>
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="inputGroupSelect01">
                                 <i class="bi-life-preserver"></i>
@@ -35,8 +42,7 @@
                                 <option value="default" selected>Choose Server...</option>
                                 <% for (var [server, instance] of Object.entries(serverList)){ %>
                                 <option value="<%= server %>">
-                                    <%= `${Utils.toTitleCase(server)}
-                                    (${Utils.getHostName(instance.host)})` %>
+                                    <%= `${Utils.toTitleCase(server)} (${Utils.getHostName(instance.host)})` %>
                                 </option>
                                 <% }; %>
                             </select>
@@ -73,6 +79,6 @@
             <div class="toast-body">Hello, buddy :V</div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
