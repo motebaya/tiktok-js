@@ -308,7 +308,7 @@
     },
     "requestBodies": {
       "onlyUrl": {
-        "description": "URL of the video or file",
+        "description": "URL MediaFire atau file",
         "required": true,
         "content": {
           "application/json": {
@@ -317,7 +317,7 @@
               "properties": {
                 "url": {
                   "type": "string",
-                  "example": "https://vt.tiktok.com/ZSJtm7bVC/"
+                  "example": "https://www.mediafire.com/file/t582f9y1jhydo6e/subdo.js/file"
                 }
               }
             }
@@ -328,7 +328,7 @@
               "properties": {
                 "url": {
                   "type": "string",
-                  "example": "https://vt.tiktok.com/ZSJtm7bVC/"
+                  "example": "https://www.mediafire.com/file/t582f9y1jhydo6e/subdo.js/file"
                 }
               }
             }
