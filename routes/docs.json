@@ -302,7 +302,7 @@
         "description": "URL of the video or file",
         "schema": {
           "type": "string",
-          "example": "https://vt.tiktok.com/ZSJtm7bVC/"
+          "example": "https://www.mediafire.com/file/t582f9y1jhydo6e/subdo.js/file"
         }
       }
     },
