@@ -258,6 +258,160 @@
         }
       }
     },
+    "/tikmate": {
+      "get": {
+        "tags": ["Tikmate"],
+        "summary": "scrape from tikmate.online",
+        "description": "scrape from tikmate.online",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Tikmate"],
+        "summary": "scrape from tikmate.online",
+        "description": "scrape from tikmate.online",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      }
+    },
+    "/tiktokdownloadr": {
+      "get": {
+        "tags": ["Tiktokdownlodr"],
+        "summary": "scrape from tiktokdownloadr.com",
+        "description": "scrape from tiktokdownloadr.com",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Tiktokdownlodr"],
+        "summary": "scrape from tiktokdownloadr.com",
+        "description": "scrape from tiktokdownloadr.com",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      }
+    },
+    "/tikwm": {
+      "get": {
+        "tags": ["Tikwm"],
+        "summary": "scrape from tikwm.com",
+        "description": "scrape from tikwm.com",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Tikwm"],
+        "summary": "scrape from tikwm.com",
+        "description": "scrape from tikwm.com",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      }
+    },
+    "/ttdownloader": {
+      "get": {
+        "tags": ["Ttdownloader"],
+        "summary": "scrape from ttdownloader.com",
+        "description": "scrape from ttdownloader.com",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/onlyUrl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Ttdownloader"],
+        "summary": "scrape from ttdownloader.com",
+        "description": "scrape from ttdownloader.com",
+        "requestBody": { "$ref": "#/components/requestBodies/onlyUrl" },
+        "responses": {
+          "200": {
+            "description": "berhasil mengekstrak data video"
+          },
+          "405": {
+            "description": "gagal mengekstrak data video"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "requestBodies": {
+      "onlyUrl": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/onlyUrl"
+            },
+            "examples": {
+              "web url": { "$ref": "#/components/examples/weburl" },
+              "mobile url": { "$ref": "#/components/examples/mobileurl" }
+            }
+          }
+        }
+      }
+    },
     "/mediafire": {
       "get": {
         "tags": ["MediaFire"],
@@ -302,13 +456,13 @@
         "description": "URL of the video or file",
         "schema": {
           "type": "string",
-          "example": "https://www.mediafire.com/file/t582f9y1jhydo6e/subdo.js/file"
+          "example": "https://vt.tiktok.com/ZSJtm7bVC/"
         }
       }
     },
     "requestBodies": {
       "onlyUrl": {
-        "description": "URL MediaFire atau file",
+        "description": "URL of the video or file",
         "required": true,
         "content": {
           "application/json": {
@@ -317,7 +471,7 @@
               "properties": {
                 "url": {
                   "type": "string",
-                  "example": "https://www.mediafire.com/file/t582f9y1jhydo6e/subdo.js/file"
+                  "example": "https://vt.tiktok.com/ZSJtm7bVC/"
                 }
               }
             }
@@ -328,10 +482,60 @@
               "properties": {
                 "url": {
                   "type": "string",
-                  "example": "https://www.mediafire.com/file/t582f9y1jhydo6e/subdo.js/file"
+                  "example": "https://vt.tiktok.com/ZSJtm7bVC/"
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+},
+    "examples": {
+      "weburl": {
+        "description": "tiktok video url from website",
+        "value": {
+          "url": "https://vt.tiktok.com/ZSFs1FYbx/"
+        }
+      },
+      "mobileurl": {
+        "description": "url video tiktok dari aplikasi seluler",
+        "value": {
+          "url": "https://vt.tiktok.com/ZSFs1YCUR/"
+        }
+      }
+    },
+    "parameters": {
+      "onlyUrl": {
+        "name": "url",
+        "required": true,
+        "description": "tiktok video url",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "nullable": false
+        },
+        "examples": {
+          "web url": {
+            "description": "tiktok url from desktop web",
+            "value": "https://vt.tiktok.com/ZSFs1FYbx/"
+          },
+          "mobile url": {
+            "description": "tiktok url from mobile",
+            "value": "https://vt.tiktok.com/ZSFs1YCUR/"
+          }
+        }
+      }
+    },
+    "schemas": {
+      "onlyUrl": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "required": true,
+            "default": "https://vt.tiktok.com/ZSFs1N2cx/"
           }
         }
       }
