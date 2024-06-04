@@ -77,19 +77,6 @@ const routerHandler = async (req, res) => {
               : {},
         });
       }
-    } else if (server === "mediafire") {
-      const resdata = await instance.mediafireDl(url);
-      if (resdata) {
-        res.status(200).json({
-          status: "success",
-          data: resdata,
-        });
-      } else {
-        res.status(500).json({
-          status: "failed",
-          message: "failed extracting file data from MediaFire",
-        });
-      }
     } else {
       const resdata = await instance.getVideoData({
         url: url,
@@ -150,7 +137,7 @@ const routerHandler = async (req, res) => {
               await Utils.renderEjs({
                 title: "Tiktok-downloader - Error",
                 result: {
-                  message: "invalid supplied fields",
+                  message: "invalid suplied fields",
                   errors: JSON.stringify(result.array()),
                 },
               })
@@ -187,14 +174,14 @@ const validated = (loc) => {
           if (
             new RegExp(
               /(?:https\:\/\/www\.tiktok\.com\/@[^\"]*?\/video\/([0-9]*)|http[s]\:\/\/vt\.tiktok\.com\/([\w+]*))/
-            ).test(value) || /(?:https:\/\/www\.mediafire\.com\/file\/[^\"]*)/.test(value)
+            ).test(value)
           ) {
             return true;
           } else {
-            throw new Error("invalid tiktok or mediafire url!");
+            throw new Error("invalid tiktok video url!");
           }
         } else {
-          throw new Error("invalid fields supplied!");
+          throw new Error("invalid fields suplied!");
         }
       })
       .optional(),
@@ -219,7 +206,7 @@ const validated = (loc) => {
             if (new RegExp(/^(?:@)?([a-zA-Z0-9_\.]{2,24})$/).test(value)) {
               return true;
             } else {
-              throw new Error("invalid supplied tiktok username");
+              throw new Error("invalid suplied tikok username");
             }
           } else {
             throw new Error(
@@ -227,7 +214,7 @@ const validated = (loc) => {
             );
           }
         } else {
-          throw new Error("invalid fields supplied");
+          throw new Error("invalid fields suplied");
         }
       })
       .optional(),
@@ -249,7 +236,6 @@ const validated = (loc) => {
       .optional(),
   ];
 };
-
 routerAPI
   .route("/v1/:server")
   .get(validated(query), routerHandler)
@@ -285,23 +271,35 @@ routerAPI
                   `${req.hostname}-${new Date()
                     .toLocaleString()
                     .replace(/\//gi, "-")
-                    .replace(/:/gi, "-")
-                    .replace(/\s/gi, "")}.${mimetype}`
-                }"`
+                    .replace(/, /, "-")
+                    .replace(/\s/gi, "")}`
+                }.${mimetype}"`
               );
               stream.data.pipe(res);
             })
-            .catch((error) => {
-              res.status(500).json({
-                status: "failed",
-                message: "error downloading the data",
-                errors: error.message,
-              });
+            .catch((err) => {
+              /**
+               * tiktok music url -> 403 (access denied).
+               * others response -> error message
+               */
+              if (err.response && err.response.status === 403) {
+                let msg;
+                err.response.data.on("data", (chunk) => {
+                  msg += chunk;
+                });
+                err.response.data.on("end", () => {
+                  res.setHeader("Content-Type", "text/html");
+                  res.status(403).send(msg);
+                });
+              } else {
+                res.setHeader("Content-Type", "text/html");
+                res.status(403).send(err.message);
+              }
             });
         } else {
           res.status(500).json({
             status: "failed",
-            message: "invalid url data",
+            message: "malformed data token params.",
           });
         }
       } else {
@@ -313,40 +311,35 @@ routerAPI
     }
   );
 
-const options = {
-  customCss: readFileSync(path.join(base, "../lib/swagger.css"), "utf8"),
-  customSiteTitle: "Tiktok-downloader API",
-  customfavIcon: "/favicon.ico",
-};
-
 /**
- * swagger api documentation
+ * swagger UI, openapi config.
  */
+const definition = JSON.parse(
+  readFileSync(path.join(process.cwd(), "routes/docs.json"), "utf-8")
+);
+const options = {
+  definition,
+  apis: [path.join(process.cwd(), "routes/api.js")],
+};
 routerAPI.use(
   "/docs",
   swaggerUi.serve,
-  swaggerUi.setup(
-    swaggerJSDoc({
-      definition: {
-        openapi: "3.0.0",
-        info: {
-          title: "Tiktok-downloader API",
-          version: "1.0.0",
-          description:
-            "Express API to fetch video from Tiktok, soundcloud, & etc.",
-        },
-        servers: [
-          {
-            url: "/api",
-          },
-        ],
-      },
-      apis: readdirSync(path.join(base, "../docs"))
-        .filter((file) => file.endsWith(".yml"))
-        .map((file) => path.join(base, "../docs", file)),
-    }),
-    options
-  )
+  swaggerUi.setup(swaggerJSDoc(options), {
+    customSiteTitle: "TiktokJS - api documentation",
+    customfavIcon: "/images/logo.ico",
+    customCssUrl: ["/css/custom.min.css", "/css/swagger-ui.css"],
+    customJs: [
+      "/js/swagger-ui-bundle.js",
+      "/js/swagger-ui-standalone-preset.js",
+    ],
+  })
 );
+
+/**
+ * 404
+ */
+routerAPI.use("*", (req, res) => {
+  res.status(404).render("404", { title: "Page Not Found" });
+});
 
 export default routerAPI;
