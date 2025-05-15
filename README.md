@@ -17,6 +17,10 @@ Tiktok downloader tool
 
 NodeJS CLI and web server tool for downloading TikTok media such as images slideshow, music, and videos (without watermark) using scraping methods.
 
+> [!warning]
+> this is just a free demo version with limited features. the full version is stored locally and has been updated weekly for the past 2 years. it includes 15+ active download servers and extra features like bulk downloads from profiles, organized output, metadata, and more.
+
+
 ### Features:
 
 - Available for CLI & web server.
